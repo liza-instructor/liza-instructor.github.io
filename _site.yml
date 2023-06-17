@@ -10,3 +10,8 @@ navbar:
       href: research.html
       
 output_dir: 'docs'
+
+# to add pre built themes
+output:
+  html_document:
+    theme: flatly
