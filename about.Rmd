@@ -1,0 +1,6 @@
+---
+title: "About"
+output: html_document
+---
+
+[Create your about section -- play with your formatting options --n what can do]

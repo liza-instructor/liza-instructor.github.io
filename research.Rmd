@@ -1,0 +1,44 @@
+---
+title: "Research"
+output: html_document
+---
+
+Try to integrate some code/data into this page.
+
+Read in data -- from data folder, Box, etc.
+
+OR just use a built in data package
+
+```{r}
+summary(iris)
+```
+```{r}
+#remotes::install_github("allisonhorst/palmerpenguins")
+library(palmerpenguins)
+penguins <- penguins
+head(penguins)
+```
+
+Visualizing some penguin data
+```{r}
+library(ggplot2)
+ggplot(data = penguins, 
+                       aes(x = flipper_length_mm,
+                           y = body_mass_g)) +
+  geom_point(aes(color = species, 
+                 shape = species),
+             size = 3,
+             alpha = 0.8) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(title = "Penguin size, Palmer Station LTER",
+       subtitle = "Flipper length and body mass for Adelie, Chinstrap and Gentoo Penguins",
+       x = "Flipper length (mm)",
+       y = "Body mass (g)",
+       color = "Penguin species",
+       shape = "Penguin species") +
+  theme(legend.position = c(0.2, 0.7),
+        plot.title.position = "plot",
+        plot.caption = element_text(hjust = 0, face= "italic"),
+        plot.caption.position = "plot")
+```
+

@@ -1,0 +1,12 @@
+name: "Liza's website"
+navbar:
+  title: "Liza Wood"
+  left:
+    - text: "Home"
+      href: index.html 
+    - text: "About"
+      href: about.html
+    - text: "Research"
+      href: research.html
+      
+output_dir: 'docs'
